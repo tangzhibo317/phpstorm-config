@@ -1,0 +1,86 @@
+let mapleader=' '
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set number
+set relativenumber
+set scrolloff=3
+set history=100000
+set clipboard=unnamed
+
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
+
+nnoremap <Leader>fs :w<CR>
+
+nnoremap <Leader>? :action GotoAction<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+
+" project search
+nnoremap <Leader>ps :action SearchEverywhere<CR>
+nnoremap <Leader>pf :action GotoFile<CR>
+
+nnoremap <Leader>fu :action FindUsages<CR>
+
+" 插入模式光标移动
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
+" 移动到行首第一个字母
+nnoremap H ^
+" 移动到行尾最后一个字母
+nnoremap L $
+" 格式化代码
+nnoremap <C-j>f <C-r>
+" 代码展开
+nnoremap zi zo
+
+" ==================================================
+" 窗口操作
+" ==================================================
+" 清除窗口
+nnoremap <Leader>wd <C-W>c
+" 光标窗口切换
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+" 纵向新增窗口
+nnoremap <Leader>ws <C-W>s
+" 横向新增串口
+nnoremap <Leader>wv <C-W>v
+
+" ==================================================
+" Tab 操作 上下切换
+" ==================================================
+nnoremap <C-m>n gt
+nnoremap <C-m>b gT
+
+" ==================================================
+" 所有预定义方法命令 `:actionlist`  取需要的命令设为组合键
+" ==================================================
+" 注释一行
+nnoremap <Leader>;; :action CommentByLineComment<CR>
+
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+nnoremap <Leader>fp :action ShowFilePath<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
+
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
