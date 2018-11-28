@@ -1,4 +1,4 @@
-let mapleader=' '
+plet mapleader=' '
 
 set hlsearch
 set incsearch
@@ -38,8 +38,7 @@ inoremap <C-d> <Delete>
 nnoremap H ^
 " 移动到行尾最后一个字母
 nnoremap L $
-" 格式化代码
-nnoremap <C-j>f <C-r>
+
 " 代码展开
 nnoremap zi zo
 
@@ -70,7 +69,8 @@ nnoremap <C-m>b gT
 " ==================================================
 " 注释一行
 nnoremap <Leader>;; :action CommentByLineComment<CR>
-
+" 格式化代码
+nnoremap <C-j>f :action ReformatCode<CR>
 nnoremap <Leader>ga :action GotoAction<CR>
 nnoremap <Leader>gc :action GotoClass<CR>
 nnoremap <Leader>gd :action GotoDeclaration<CR>
